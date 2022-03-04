@@ -1,0 +1,80 @@
+#ifndef LIBRERIAPASAJES_H
+#define LIBRERIAPASAJES_H
+#include <iostream>
+#define MAX 1000
+using namespace std;
+
+
+
+
+            struct Reserva{
+                string destino, fecha, nombre, carnet;
+            };
+
+
+
+            Reserva Reservado[MAX];
+            int cantReserva = 0;
+
+
+
+// MENU PRINCIPAL
+            void menu (){
+                system("cls");
+                cout<<"AGENCIA DE ASTRO "<<endl;
+                cout<<"-----------------------------------"<<endl<<endl;
+                cout<<" (1) Reservar un pasaje"<<endl;
+                cout<<" (2) Pre-Pasaje"<<endl;
+                cout<<" (3) Listado de Reservaciones"<<endl;
+                cout<<" (4) Reintegrar Pasaje"<<endl;
+                cout<<" (5) Enviar Bulto"<<endl;
+                cout<<" (6) Planificacion de los viajes"<<endl;
+                cout<<" (7) Modificacion"<<endl;
+                cout<<" (0) Salir "<<endl;
+                cout<<" Escoja una opcion: ";
+            }
+
+
+//            1.Reservar un pasaje.
+            void Reserva(){
+                cout<<"Nombre la persona: "<<endl;
+                cin>>Reservado[cantReserva].nombre;
+                cout<<"Numero de carnet: "<<endl;
+                cin>>Reservado[cantReserva].carnet;
+                cout<<"Destino: "<<endl;
+                cin>>Reservado[cantReserva].destino;
+                cout<<"Fecha de salida: "<<endl;
+                cin>>Reservado[cantReserva].fecha;
+                cantReserva++;
+            }
+
+
+
+//            2.Confeccionar un pre-pasaje.
+            void PasajeReservado(){
+                cout<<"\nPRE-PASAJE: \n";
+                cout<<" NOMBRES\t\t CARNET \t\t DESTINO \t\t FECHA \n";
+                for (int i=0; i<cantReserva; i++){
+                    cout<<Reservado[i].nombre<<"\t\t\t "<<Reservado[i].carnet<<
+                          "\t\t "<<Reservado[i].destino<<"\t\t "<<Reservado[i].fecha<<endl;
+                }
+            }
+
+
+
+
+
+            //            3.Listado de reservaciones.
+            //            4.Reintegrar pasaje.
+            //            5.Recogida de un bulto.
+            //            6.Planificación de los viajes.
+            //            7.Modificar Planificación.
+
+
+
+
+
+
+
+
+#endif // LIBRERIAPASAJES_H
